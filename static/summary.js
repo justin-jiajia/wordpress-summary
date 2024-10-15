@@ -8,6 +8,7 @@ function getanddisplay() {
   if (pValue != null) {
     const newDiv = document.createElement('div');
     newDiv.style.border = '2px solid blue';
+    newDiv.style.margin = '8px';
     const targetDiv = document.getElementById('post_content');
     if (targetDiv) {
       targetDiv.parentNode.insertBefore(newDiv, targetDiv);
