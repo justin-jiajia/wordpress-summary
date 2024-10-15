@@ -35,7 +35,8 @@ def get_wordpress_post_content(post_id):
         return None
 
     finally:
-        cursor.close()
+        if cursor is not None:
+            cursor.close()
 
 
 def create_table():
@@ -59,7 +60,8 @@ def create_table():
         summary_connection.commit()
 
     finally:
-        cursor.close()
+        if cursor is not None:
+            cursor.close()
 
     return True
 
@@ -85,7 +87,8 @@ def get_content_by_id_and_md5(id_value, md5_value):
         return None
 
     finally:
-        cursor.close()
+        if cursor is not None:
+            cursor.close()
 
 
 def update_content_by_id(id_value, md5_value, content_value):
@@ -107,4 +110,5 @@ def update_content_by_id(id_value, md5_value, content_value):
         summary_connection.commit()
 
     finally:
-        cursor.close()
+        if cursor is not None:
+            cursor.close()

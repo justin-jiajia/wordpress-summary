@@ -1,0 +1,15 @@
+#type_blink::after {
+  content: '|';
+  color: darkgray;
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
